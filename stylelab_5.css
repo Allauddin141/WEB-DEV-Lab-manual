@@ -1,0 +1,92 @@
+/* ELEMENT SELECTOR */
+
+h1 {
+    color: blue;
+}
+
+p {
+    color: green;
+}
+
+/* ID SELECTOR */
+
+#main-title {
+    text-decoration: underline;
+    color: navy;
+}
+
+/* CLASS SELECTOR */
+
+.highlight {
+    background-color: yellow;
+    font-style: italic;
+}
+
+/* GROUPING SELECTOR */
+
+h2, p, li {
+    border: 1px solid black;
+    padding: 5px;
+}
+
+/* DESCENDANT SELECTOR */
+
+div p {
+    color: red;
+    font-weight: bold;
+}
+
+/* CHILD SELECTOR */
+
+div > ul > li {
+    background-color: lightgray;
+}
+
+/* ATTRIBUTE SELECTORS */
+
+input[type="text"] {
+    border: 2px solid blue;
+}
+
+input[type="password"] {
+    border: 2px solid red;
+}
+
+/* PSEUDO CLASSES */
+
+a:hover {
+    color: red;
+}
+
+ul li:first-child {
+    font-weight: bold;
+    color: green;
+}
+
+ul li:last-child {
+    color: blue;
+}
+
+/* PSEUDO ELEMENTS */
+
+h2::before {
+    content: "★ ";
+    color: orange;
+}
+
+h2::after {
+    content: " ★";
+    color: orange;
+}
+
+p::first-letter {
+    font-size: 24px;
+    color: purple;
+}
+
+/* IMAGE STYLING */
+
+img {
+    width: 250px;
+    border: 3px solid black;
+}
