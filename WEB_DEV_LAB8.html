@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lab 8 - Interactive Webpage</title>
+
+    <style>
+
+        body{
+            font-family: Arial, sans-serif;
+            text-align:center;
+            background:#f4f4f4;
+        }
+
+        h1{
+            color:#333;
+        }
+
+        button{
+            padding:10px 20px;
+            margin:10px;
+            cursor:pointer;
+        }
+
+        #box{
+            width:120px;
+            height:120px;
+            background:royalblue;
+            margin:20px auto;
+            transition:0.5s;
+        }
+
+        #text{
+            font-size:22px;
+            color:black;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<h1>Interactive Webpage</h1>
+
+<button id="colorBtn">Change My Color</button>
+
+<button id="textBtn">Change Text</button>
+
+<button id="sizeBtn">Increase Box Size</button>
+
+<div id="box"></div>
+
+<p id="text">Welcome to my JavaScript Lab</p>
+
+<h3>Reflection</h3>
+
+<p>
+This experiment helped me understand how JavaScript event listeners work to make webpages interactive.
+I learned how to connect different events with HTML elements and change their properties using DOM manipulation.
+Using the <b>this</b> keyword helped me understand how to access the specific element that triggered an event.
+Designing my own interactions improved my understanding of event handling and made JavaScript more interesting to learn.
+</p>
+
+<script>
+
+const colorBtn = document.getElementById("colorBtn");
+const textBtn = document.getElementById("textBtn");
+const sizeBtn = document.getElementById("sizeBtn");
+
+const box = document.getElementById("box");
+const text = document.getElementById("text");
+
+colorBtn.addEventListener("click", function(){
+
+    this.style.backgroundColor = "green";
+    this.style.color = "white";
+
+});
+
+textBtn.addEventListener("click", function(){
+
+    text.innerHTML = "JavaScript makes webpages interactive!";
+
+});
+
+sizeBtn.addEventListener("click", function(){
+
+    box.style.width = "180px";
+    box.style.height = "180px";
+    box.style.borderRadius = "50%";
+
+});
+
+box.addEventListener("mouseover", function(){
+
+    box.style.backgroundColor = "tomato";
+
+});
+
+box.addEventListener("mouseout", function(){
+
+    box.style.backgroundColor = "royalblue";
+
+});
+
+</script>
+
+</body>
+</html>
